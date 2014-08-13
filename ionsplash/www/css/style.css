@@ -1,0 +1,30 @@
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.thumbnail {
+  position: absolute;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.image img {
+  -webkit-transition: all 0.5s ease; /* Safari and Chrome */
+  -moz-transition: all 0.5s ease; /* Firefox */
+  -o-transition: all 0.5s ease; /* IE 9 */
+  -ms-transition: all 0.5s ease; /* Opera */
+  transition: all 0.5s ease;
+}
+
+.image.zoom img {
+  -webkit-transform:scale(2.25); /* Safari and Chrome */
+  -moz-transform:scale(2.25); /* Firefox */
+  -ms-transform:scale(2.25); /* IE 9 */
+  -o-transform:scale(2.25); /* Opera */
+  transform:scale(2.25);
+  opacity: 0;
+}

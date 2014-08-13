@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <script src="http://code.ionicframework.com/1.0.0-beta.6/js/ionic.bundle.js"></script>
+
+
+    <script src="lib/ng-cordova.js"></script>
+    <script src="cordova.js"></script>
+
+    <script src="lib/filterous.js"></script>
+    <script src="lib/filterousEffects.js"></script>
+
+
+  </head>
+  <body ng-app="instaclone" animation="slide-left-right-ios7">
+    <ion-nav-view>
+      <ion-view ng-controller="CameraCtrl">
+        <ion-slide-box>
+          <ion-slide>
+            <div>
+              <h1>TAKE A PICTURE</h1>
+              <i ng-click="getPhoto()" class="icon ion-camera button-camera"></i>
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <div class="row row-center" ng-show="status.filtering > 0">
+              <div class="col col-center">
+                <button class="button button-light button-round">
+                  <i class="icon ion-looping"></i>
+                  APPLYING...
+                </button>
+              </div>
+            </div>
+            <div class="row row-center" ng-show="status.filtering == 0">
+              <div class="col col-center">
+                <button ng-click="convertPhoto()" class="button button-positive button-round">APPLY FILTERS</button>
+              </div>
+            </div>
+            <div class="list card">
+              <div class="item item-image">
+                <source-img model="lastPhoto"></source-img>
+              </div>
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <h1>BRIGHT</h1>         
+            <div class="list card">
+              <div class="item item-text-wrap" ng-show="!lastPhoto || !status.isFiltered">
+                <h2>
+                  This screen will look better after you take a photo and run filters!
+                </h2>  
+              </div>
+              <div class="item item-image">
+                <filter-img effect="fluorescent" model="readyPhoto"></filter-img>
+              </div>
+            </div>   
+          </ion-slide>
+          <ion-slide>
+            <h1>DARK</h1>
+            <div class="list card">
+              <div class="item item-text-wrap" ng-show="!lastPhoto || !status.isFiltered">
+                <h2>
+                  This screen will look better after you take a photo and run filters!
+                </h2>  
+              </div>
+              <div class="item item-image">
+                <filter-img effect="phykos" model="readyPhoto"></filter-img>
+              </div>
+            </div>            
+          </ion-slide>
+          <ion-slide>
+            <h1>BLACK & WHITE</h1>
+            <div class="list card">
+              <div class="item item-text-wrap" ng-show="!lastPhoto || !status.isFiltered">
+                <h2>
+                  This screen will look better after you take a photo and run filters!
+                </h2>  
+              </div>
+              <div class="item item-image">
+                <filter-img effect="sumie" model="readyPhoto"></filter-img>
+              </div>
+            </div>                
+          </ion-slide>
+        </ion-slide-box>
+      </ion-view>
+    </ion-nav-view>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/controllers.js"></script>
+
+  </body>
+</html>

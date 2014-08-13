@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="lib/ng-cordova.js"></script>
+    <script src="cordova.js"></script>
+
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="imageMotion">
+    <ion-pane ng-controller="DeviceMotionCtrl">
+      <ion-content ng-style="{'background-position': pos}" ng-class="{'img-content': pos}">
+        <div class="list">
+          <a class="item" href="#">
+            Acceleration X
+            <span class="badge badge-balanced">{{ acceleration.x }}</span>
+          </a>
+          <a class="item" href="#">
+            Acceleration Y
+            <span class="badge badge-balanced">{{ acceleration.y }}</span>
+          </a>
+          <a class="item" href="#">
+            Acceleration Z
+            <span class="badge badge-balanced">{{ acceleration.z }}</span>
+          </a>
+          <a class="item" href="#">
+            Timestamp
+            <span class="badge badge-balanced">{{ acceleration.timestamp }}</span>
+          </a>
+        </div>
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>

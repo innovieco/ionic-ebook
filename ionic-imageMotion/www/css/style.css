@@ -1,0 +1,9 @@
+.img-content {
+  background-image: url(../img/test.png);
+  background-repeat: no-repeat;
+}
+
+.item {
+  background-color: transparent;
+  border-color: transparent;
+}
