@@ -1,4 +1,7 @@
 Full-stack Mobile App with Ionic Framework eBook
 ===========
 
-For a free copy of the ebook, please go to [http://innovie.com/](http://innovie.com/)
+This book is now available on [Amazon Kindle](http://www.amazon.com/dp/B00QF1H380)
+
+For update and future preview of the ebook, please subscribe to [http://innovie.com/](http://innovie.com/)
+
